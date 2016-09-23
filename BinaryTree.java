@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 /*
  * Clase BinaryTree, se tomo como ejemplo para su realizacion
  * la clase del libro Java Structures, capitulo 12.4.1 
@@ -92,10 +90,6 @@ protected BinaryTree<E> parent,left,right;
 			parent=newParent;
 		}
 	}
-	// METODO NECESITA CORRECCION
-	public Iterator <E> iterator(){
-		
-	}
 	
 	
 	public E value(){
@@ -105,10 +99,14 @@ protected BinaryTree<E> parent,left,right;
 	public void setValue(E valor){
 		val=valor;
 	}
-	// CORREGIR ESTE METODO
+
 	public boolean isEmpty(){
-		
-			return true;
+		boolean empty=false;
+		if(parent==null)
+			empty=true;
+		else
+			return empty;
+		return empty;
 		
 	}
 
