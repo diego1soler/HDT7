@@ -1,8 +1,8 @@
-/*
+/**
  * Clase BinaryTree, se tomo como ejemplo para su realizacion
  * la clase del libro Java Structures, capitulo 12.4.1 
  * 
- */
+ **/
 public class BinaryTree<E>{
 	
 protected E val;
