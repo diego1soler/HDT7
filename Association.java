@@ -4,7 +4,7 @@
  * https://github.com/sliuu/post_script/blob/master/structure5/Association.java
  */
 import java.util.Map;
-
+import java.io.*;
 
 
 public class Association<K,V> implements Map.Entry<K,V>
@@ -65,5 +65,24 @@ public class Association<K,V> implements Map.Entry<K,V>
         s.append("<Association: "+getKey()+"="+getValue()+">");
         return s.toString();
     }
+    
+    public String leerArchivo(String direccion){
+
+    		String resultado = "";
+    		try {
+    			FileReader f = new FileReader(direccion);
+    			BufferedReader b = new BufferedReader(f);
+    			try {
+    				resultado = b.readLine();
+    				b.close();
+    			} catch (IOException e) {
+    				return "No se puede abrir archivo";
+    			}
+    		} catch (FileNotFoundException e) {
+    			return "Archivo no encontrado";
+    		}
+    		return resultado;
+    	}
+    
 
 }
