@@ -16,7 +16,7 @@ public class Association<K,V> {
 		english = null;
 		spanish = null;
 	}
-	public Association(K english,  V spanish,Association<K,V> words){
+	public Association(K english,  V spanish){
 		this.english= english;
 		this.spanish=spanish;
               

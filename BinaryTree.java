@@ -4,9 +4,11 @@
  * 
  **/
 public class BinaryTree<E>{
-	
-protected E val;
-protected BinaryTree<E> parent,left,right;
+
+	private Node raiz;
+    private String arbol;
+    protected E val;
+    protected BinaryTree<E> parent,left,right;
 
 
 	public BinaryTree() {
@@ -109,5 +111,32 @@ protected BinaryTree<E> parent,left,right;
 		return empty;
 		
 	}
+	
+	 public  void insertNode(Association<String,String> insert){
+	        if(raiz == null){
+	            raiz = new Node(insert); //crea nodo raiz
+	            
+	        }
+	        else{
+	            raiz.insertar(insert); //llama al metodo insertar 
+	        }
+	            
+	    }
+	 
+    public  String recorridoinOrder()
+    {
+        inOrder(raiz);
+        return arbol;
+        
+    }
+     
+    private void inOrder(Node nodo)
+    {
+        if(nodo == null)return;
+        inOrder(nodo.left);
+        arbol=arbol+"("+nodo.data.getEnglish()+", "+nodo.data.getSpanish()+")";
+        inOrder(nodo.right);
+        
+    }
 
 }
