@@ -122,7 +122,7 @@ public class BinaryTree<E>{
 	
 	public String Search(String word){
         tempWord=word;
-        Search2(raiz);
+        Search2(raiz);  //Recursion para la busqueda
         return tempWord;   
        }
 	
@@ -154,13 +154,14 @@ public class BinaryTree<E>{
 	 
     public  String recorridoinOrder()
     {
-        inOrder(raiz);
+        inOrder(raiz); //Metodo recursivo
         return arbol;
         
     }
      
     private void inOrder(Node nodo)
     {
+    	//Se recorre el arbol
         if(nodo == null)return;
         inOrder(nodo.left);
         arbol=arbol+"("+nodo.data.getEnglish()+", "+nodo.data.getSpanish()+")";

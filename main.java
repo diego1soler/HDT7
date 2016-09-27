@@ -37,6 +37,7 @@ public class main {
 	    
 	    
 	    
+	    //Aqui se recorre el texto para el posterior reemplazo
 	    int inicio = 0;
         int num=0;
         List<String> Texto = new ArrayList<>();
@@ -49,7 +50,7 @@ public class main {
                     }
                  }
         
-
+        //Se usan los metodos de search del binarytree para reemplazar las palabras
         String resultado="";
              for(int n = 0; n<num; n++){
                         String word1 = Tree.Search(Texto.get(n).replace(" ",""));
@@ -66,11 +67,9 @@ public class main {
                         }
                  }
              
+             //Se muestra la traduccion
              System.out.println("Texto traducido: \n"+resultado);
    
-  /* for (int i = 0; i< classesTaken.length; i++){
-       System.out.println("La palabra en ingles es " + classesTaken[i].getEnglish() +
-                      " y en español es " + classesTaken[i].getSpanish()+ ".");
-   }*/
+ 
 	}
 }
