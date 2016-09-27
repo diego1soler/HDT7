@@ -3,10 +3,18 @@
  * la clase del libro Java Structures, capitulo 12.4.1 
  * 
  **/
+
+
+/** 
+* Clase: BinaryTree.java
+* @author Diego Soler, Jose Molina, Brandon Hernandez
+* @version 26/09/16
+*/
 public class BinaryTree<E>{
 
 	private Node raiz;
     private String arbol;
+    private String tempWord;
     protected E val;
     protected BinaryTree<E> parent,left,right;
 
@@ -112,13 +120,34 @@ public class BinaryTree<E>{
 		
 	}
 	
+	public String Search(String word){
+        tempWord=word;
+        Search2(raiz);
+        return tempWord;   
+       }
+	
+   public void Search2(Node nodo){
+
+       if(nodo==null)return;
+       Search2(nodo.left);
+       if(nodo.data.getEnglish().equals(tempWord)){
+           tempWord=nodo.data.getSpanish();
+          
+       } 
+       if(nodo.data.getSpanish().equals(tempWord)){
+       return;
+       }
+       Search2(nodo.right);
+       
+   }    
+	
 	 public  void insertNode(Association<String,String> insert){
 	        if(raiz == null){
-	            raiz = new Node(insert); //crea nodo raiz
+	            raiz = new Node(insert); //Se crea el nodo raiz
 	            
 	        }
 	        else{
-	            raiz.insertar(insert); //llama al metodo insertar 
+	            raiz.insertar(insert); //Llamada a insertar
 	        }
 	            
 	    }

@@ -1,3 +1,9 @@
+/** 
+* Clase: Node.java
+* @author Diego Soler, Jose Molina, Brandon Hernandez
+* @version 26/09/16
+*/
+
 public class Node{
    
     Node left;

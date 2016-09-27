@@ -3,6 +3,12 @@
  * https://github.com/sliuu/post_script/blob/master/structure5/Association.java
  */
 
+/** 
+* Clase: Association.java
+* @author Diego Soler, Jose Molina, Brandon Hernandez
+* @version 26/09/16
+*/
+
 import java.io.*;
 
 
@@ -35,6 +41,7 @@ public class Association<K,V> {
 		return spanish;
 	}
     
+	//Metodo para leer un archivo de texto y hacerle separaciones
     public String leerArchivo (String direccion) {
 		String res = "";
 		String temp = "";
